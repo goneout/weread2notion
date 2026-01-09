@@ -396,7 +396,7 @@ if __name__ == "__main__":
     session.cookies = parse_cookie_string(weread_cookie)
     client = Client(auth=notion_token, log_level=logging.ERROR)
     session.get(WEREAD_URL)
-    latest_sort = get_sort()
+    latest_sort = 0
     books = get_notebooklist()
     if books != None:
         for index, book in enumerate(books):
